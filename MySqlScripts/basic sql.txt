@@ -1,0 +1,105 @@
+#display first name last name ans salary of all employees
+select first_name,last_name,salary
+from employees;
+
+#display first name last name and salary of all employees
+#where salary less tha 5000
+select first_name,last_name,salary
+from employees
+where salary<5000;
+
+
+#display all employees whose names start with 'S'
+select first_name,last_name
+from employees
+where upper(first_name) like 'S%';
+#Starts with S followed by any letters
+
+#display all employees whose names has 'an' in their names
+select first_name,last_name
+from employees
+where lower(first_name) like '%an%';
+
+
+
+#display all employees arrange them hired date
+# use ORDER BY
+# by default its ascending order
+#specify DESC for descending order
+select first_name,last_name,hire_date
+from employees
+order by hire_date;
+
+
+#display the employee with the max salary
+select max(salary) from employees;
+
+
+
+#display the employee with the max salary
+#query in another query
+select first_name,last_name,job_id
+from employees
+where salary= (select max(salary) from employees);
+#similar to max---min will display the least values
+
+
+#display 5 employees with least salaries
+select first_name,last_name,salary
+from employees
+order by salary
+limit 5;
+# limit indicates the number of records to be displayed
+
+#assign column names to retrieved results
+#display salary range of all employees
+select min(salary) min_sal,#calculate minimum salry and name it as min_sal
+	   max(salary) max_sal,
+       round(avg(salary)) avg_sal
+from employees;
+
+#display how many employees where hired year wise
+#use count()
+SELECT year(hire_date) hired_year,
+count(*) employees_hired_count #count all
+from employees
+group by year(hire_date)
+order by desc;
+
+#display all employees hired in the 90s (between 1990 and 1999)
+select first_name,last_name
+from employees
+WHERE year(hire_date) BETWEEN 1990 and 1999;
+
+
+#update/edit records
+#change salry of a person
+update employees
+set salary=30000
+where employee_id=100;
+
+select *
+from employees
+WHERE employee_id=100;
+
+#delete records
+
+delete 
+from employees
+WHERE employee_id=100;
+
+#if where clause is not spefied all records will be deleted
+
+select *
+from employees
+WHERE employee_id=100;
+
+
+
+
+
+
+
+
+
+
