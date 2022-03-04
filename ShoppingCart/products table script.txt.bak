@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS `products` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`name` varchar(200) NOT NULL,
+	`desc` text NOT NULL,
+	`price` decimal(7,2) NOT NULL,
+	`rrp` decimal(7,2) NOT NULL DEFAULT '0.00',
+	`quantity` int(11) NOT NULL,
+	`img` text NOT NULL,
+	`date_added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+INSERT INTO `products` (`id`, `name`, `desc`, `price`, `rrp`, `quantity`, `img`, `date_added`) VALUES
+(1, 'Green Prince', '', '29.99', '0.00', 10, 'card1.jpg', '2021-03-13 17:55:22'),
+(2, 'Cosmos', '', '14.99', '19.99', 34, 'card2.jpg', '2021-03-13 18:52:49'),
+(3, 'Haworthia', '', '19.99', '0.00', 23, 'card3.jpg', '2021-03-13 18:47:56'),
+(4, 'Pagoda', '', '69.99', '0.00', 7, 'card5.jpg', '2021-03-13 17:42:04');
