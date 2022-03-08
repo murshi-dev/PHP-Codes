@@ -1,0 +1,30 @@
+<!-- login form -->
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="newstyles.css">
+        <!-- font awesome link -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="login">
+            <form action="authenticate.php" method="POST">
+                <!-- username -->
+                <label for="username"> 
+                    <i class="fas fa-user"></i>
+                </label>
+                <input type="text" name="username" placeholder="Username" id="username" required>
+                <!-- password -->
+                <label for="password"> 
+                    <i class="fas fa-key"></i>
+                </label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+      
+                <!-- Login button -->
+                <input type="submit" value="Login">
+                <!-- a link to register.html -->
+                <a href="register.html">New User</a>
+            </form>
+        </div>
+    </body>
+</html>

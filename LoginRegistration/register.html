@@ -1,0 +1,32 @@
+<!-- registration page for new user to register -->
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="newstyles.css">
+        <!-- font awesome link -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="register">
+            <form action="register.php" method="POST">
+                <!-- username -->
+                <label for="username"> 
+                    <i class="fas fa-user"></i>
+                </label>
+                <input type="text" name="username" placeholder="Username" id="username" required>
+                <!-- password -->
+                <label for="password"> 
+                    <i class="fas fa-key"></i>
+                </label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+                <!-- email -->
+                <label for="email"> 
+                    <i class="fas fa-at"></i>
+                </label>
+                <input type="email" name="email" placeholder="Email" id="email" required>
+                <!-- Register button -->
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
+</html>
